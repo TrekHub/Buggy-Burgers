@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Pacifico&family=Source+Code+Pro:wght@300&display=swap");
+#main,
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+#cart-section h1 {
+  font-size: 40px;
+  text-align: center;
+}
+.cart {
+  display: flex;
+  /* background-color: rgba(249, 204, 179, 0.29); */
+  width: 90%;
+  margin: auto;
+}
+.cart-container {
+  width: 80%;
+}
+.delivery-section {
+  width: 30%;
+  /* background-color: rgba(252, 231, 220, 0.29); */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.cart-list li {
+  list-style: none;
+}
+#cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 10px;
+  padding: 16px;
+  border-radius: 10px;
+}
+#title {
+  font-size: 20px;
+  margin: 5px;
+  font-weight: 800;
+}
+.quantity {
+  margin-left: 5px;
+  color: rgb(48, 46, 46);
+}
+.quantity input {
+  width: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border: 2px solid rgba(249, 204, 179, 0.29);
+  outline: none;
+  border-radius: 5px;
+}
+#cart-item label {
+  font-size: 16px;
+  margin-right: 5px;
+  text-align: end;
+  font-weight: 800;
+}
+#cart-item select {
+  width: 100px;
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid rgba(249, 204, 179, 0.29);
+}
+.price h4 {
+  margin: 0;
+  color: #f33700;
+  font-size: 18px;
+}
+.delete i {
+  font-size: 18px;
+  color: #f33700;
+}
+
+.delivery-section #email2 , #phoneNumber , #location {
+    height: 35px;
+    width: 70%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 2px solid #f33700;
+    outline: none;
+  }
+
+  .delivery-section #submit , #checkout {
+    height: 35px;
+    font-weight: 900;
+    width: 40%;
+    background-color: #f33700;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin: 30px auto;
+  }
+
+  .total {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+  }
+  .total>h2 {
+      margin: 0;
+  }
+  #line {
+      width: 100%;
+      border-bottom: 3px solid #f33700;
+  }
+  .total-info {
+      margin-left: 80%;
+      width: 30%;
+  }
+  #totalPrice {
+      font-size: 28px;
+      color: #f33700;
+      font-weight: 700;
+      margin: 10px;
+  }
+  #checkout {
+    height: 35px;
+    font-weight: 900;
+    width: 50%;
+    background-color: #f33700;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px auto;
+  }
