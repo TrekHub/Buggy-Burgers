@@ -335,6 +335,23 @@ body {
   margin: 30px auto;
 }
 
+
+/* Contact section media queries */
+  @media only screen and (max-width: 1000px) {
+    .contact-left{
+      display: none;
+    }
+    .contact-right {
+      width: 90%;
+      margin: auto;
+    }
+    .contact-right #submit{
+      width: 70%;
+    }
+
+  }
+
+
 /* FOOTER SECTION */
 #footer-section {
   width: 90%;
@@ -402,4 +419,19 @@ body {
 .copyright p > i {
   color: red;
   font-size: 18px;
+}
+
+
+@media only screen and (max-width: 430px) {
+  .line{
+    display: none;
+  }
+  .footer{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .quick-links h2 {
+    margin-left: 30px;
+  }
 }
