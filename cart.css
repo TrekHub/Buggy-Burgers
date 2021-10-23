@@ -122,7 +122,7 @@ body {
   }
   .total-info {
       margin-left: 80%;
-      width: 30%;
+      width: 50%;
   }
   #totalPrice {
       font-size: 28px;
@@ -133,11 +133,42 @@ body {
   #checkout {
     height: 35px;
     font-weight: 900;
-    width: 50%;
+    width: 120px;
     background-color: #f33700;
     color: white;
     border: none;
     outline: none;
     border-radius: 10px;
-    margin: 10px auto;
+   margin:  10px;
   }
+
+@media only screen and (max-width: 1400px) {
+    .delivery-section {
+        display: none;
+
+    }
+    .cart-container {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    #cart-item {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 300px;
+    }
+    .delete {
+        display: inline-block !important;
+    }
+    #totalPrice {
+        font-size: 18px;
+    }
+    #checkout {
+       
+        width: 90px;
+    }
+    .total-info {
+        margin-left: 50%;
+    }
+}
