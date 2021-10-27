@@ -18,18 +18,9 @@ body {
   margin: auto;
 }
 .cart-container {
-  width: 80%;
+  width: 100%;
 }
-.delivery-section {
-  width: 30%;
-  /* background-color: rgba(252, 231, 220, 0.29); */
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 20px;
-}
+
 
 .cart-list li {
   list-style: none;
@@ -55,7 +46,7 @@ body {
   color: rgb(48, 46, 46);
 }
 .quantity input {
-  width: 20px;
+  width: 40px;
   margin-left: 10px;
   padding-left: 10px;
   border: 2px solid rgba(249, 204, 179, 0.29);
@@ -70,7 +61,7 @@ body {
 }
 #cart-item select {
   width: 100px;
-  height: 30px;
+  height: 40px;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: white;

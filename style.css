@@ -17,31 +17,31 @@ body {
   margin: auto;
   margin-top: 10px;
 }
-.nav-logo h1 {
+#nav-logo h1 {
   margin: 0;
   font-size: 28px;
   font-weight: bold;
 }
-.nav-logo h1 > span {
+#nav-logo h1 > span {
   color: #f33700;
 }
-.nav-links .nav .nav-item {
+#nav-links #nav #nav-item {
   display: inline;
   margin-left: 16px;
 }
-.nav-links .nav .nav-item a {
+#nav-links #nav #nav-item a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.69);
+  color: rgba(0, 0, 0, 069);
 }
-.nav-icons {
+#nav-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 #btn-logo {
-  width: 120px;
+  width: 150px;
   height: 40px;
-  margin-left: 30px;
+  margin-left: 10px;
   background-color: #f33700;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   color: white;
@@ -55,16 +55,16 @@ body {
 /* Media Queries for the NavBar */
 
 @media only screen and (max-width: 512px) {
-  .nav-logo h1 {
+  #nav-logo h1 {
     font-size: 18px;
   }
-  .nav-icons button {
+  #nav-icons button {
     display: none;
   }
 }
 
 @media only screen and (max-width: 1100px) {
-  .nav-links {
+  #nav-links {
     display: none;
   }
   #navBar {
