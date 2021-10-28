@@ -51,6 +51,25 @@ body {
   padding: 5px 10px;
   outline: none;
 }
+#cart {
+  position: relative;
+}
+#badge {
+  position: absolute;
+  top: -13px;
+  left: -16px;
+  height:20px;
+  font-size: 14px;
+  width:20px;
+  padding-left: 5px;
+  padding-bottom: 7px;
+  color: white;
+font-weight: bold;
+  border-radius: 50%;
+  background-color:#f33700
+
+
+}
 
 /* Media Queries for the NavBar */
 

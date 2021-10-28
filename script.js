@@ -1,6 +1,5 @@
 // The Burger Constructor
-function Burger(burgerType, id, image = './assets/burger.png') {
-
+function Burger(burgerType, id, image = "./assets/burger.png") {
   this.burgerType = burgerType;
   this.id = id;
   this.image = image;
@@ -10,19 +9,18 @@ function Burger(burgerType, id, image = './assets/burger.png') {
   this.crust = {};
 }
 
+const newBurgers = [
+  new Burger("Beef Burger", 1),
+  new Burger("Chicken Burger", 2),
+  new Burger("Veggie Burger", 3),
+  new Burger("Bison Burger", 4),
+];
 
-const newBurgers = [new Burger('james', 1), new Burger('Ted', 2), new Burger('Bob', 3), new Burger('Brown', 4)];
-  
-console.log(newBurgers);
+// creating a new list element
 
-// console.log(cardContainer.innerHTML)
-
-
-newBurgers.forEach(function(newBurger, index) {
-
-  const cardContainer = document.querySelectorAll('.card-container')
-  let newEl = document.createElement('div');
-  
+newBurgers.forEach(function (newBurger, index) {
+  const cardContainer = document.querySelectorAll(".card-container");
+  let newEl = document.createElement("div");
 
   newEl.innerHTML = ` 
   <div class="card">
@@ -51,107 +49,79 @@ newBurgers.forEach(function(newBurger, index) {
   </div>
 
 `;
-for( i = 0; i < cardContainer.length; i++) {
-  cardContainer[i].appendChild(newEl)
-
-};
 
 
+//Appending the newly created Item
+  for (i = 0; i < cardContainer.length; i++) {
+    cardContainer[i].appendChild(newEl);
+  }
+});
 
-})
-
-// Sizes array of objects
-
-const sizes = [
-  {
-    size: "small",
-    price: 200,
-  },
-  {
-    size: "medium",
-    price: 400,
-  },
-  {
-    size: "large",
-    price: 600,
-  },
-];
-
-// Toppings array of objects
-
-const toppings = [
-  {
-    id: 1,
-    toppingName: "chiles",
-    price: 300,
-  },
-  {
-    id: 2,
-    toppingName: "Bacon",
-    price: 600,
-  },
-  {
-    id: 3,
-    toppingName: "pickles",
-    price: 100,
-  },
-  {
-    id: 4,
-    toppingName: "lettuce",
-    price: 200,
-  },
-];
-
-// The crust array of objects
-
-const crusts = [
-  {
-    id: 1,
-    crustName: "Crispy",
-    price: 300,
-  },
-  {
-    id: 2,
-    crustName: "Stuffed",
-    price: 300,
-  },
-  {
-    id: 3,
-    crustName: "Gluten Free",
-    price: 300,
-  },
-];
-
-Burger.prototype.calculateBurgerPrice = function () {};
+//targetting DOM elements
 
 const cartList = document.querySelector(".cart-list");
 const cartIcon = document.querySelectorAll(".icon-cont");
-
+let bagdeCounter = document.getElementById("badge");
+let counter = 0;
 
 for (i = 0; i < cartIcon.length; i++) {
   cartIcon[i].addEventListener("click", function (e) {
-    // console.log(this.getAttribute("data-index"))
+    counter++;
+    bagdeCounter.textContent = counter;
 
+    const clickedBurger = newBurgers[this.getAttribute("data-index")];
 
-  const clickedBurger = newBurgers[this.getAttribute("data-index")]
-  console.log(clickedBurger)
-    // cartList.appendChild(item);
-    
+    addOrders(clickedBurger);
   });
 }
 
+//Adding Orders to The newly created element
+
+function addOrders(clickedBurger) {
+  const newOrder = document.createElement("li");
+  newOrder.innerHTML = `<div class="" id="cart-item">
+  <img src="${clickedBurger.image}" height="70" width="70" alt="">
+  <div>
+      <p id="title">${clickedBurger.burgerType}</p>
+      <div class="quantity">
+          <label for="quantity">Quantity</label>
+          <input type="text" value="1">
+      </div>
 
 
+  </div>
+  <div>
+      <label for="">Size</label>
+      <select name="Size">
+          <option value="" selected>Medium</option>
+          <option value="">Large</option>
+          <option value="">Small</option>
+      </select>
+  </div>
+  <div>
+      <label for="">Crust</label>
+      <select name="Size">
+          <option value="" selected>Crispy</option>
+          <option value="">Stuffed</option>
+          <option value="">Gluten Free</option>
+      </select>
+  </div>
+  <div class="size">
+      <label for="">Toppings</label>
+      <select name="Size">
+          <option value="" selected>Medium</option>
+          <option value="">Large</option>
+          <option value="">Small</option>
+      </select>
+  </div>
+  <div class="price">
+      <h4>Ksh 1000</h4>
+  </div>
+  <div class="delete">
+      <i class="far fa-trash-alt"></i>
+  </div>
 
+</div>`;
 
-
-
-
-
-
-
-
-
-
-
-
+  cartList.appendChild(newOrder);
+}
